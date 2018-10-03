@@ -1,0 +1,16 @@
+
+<amexio-nav [enable-side-nav-position]="true" [title]="'TESTPROECTFORMENUS'">
+<amexio-nav-item position-right *ngFor="let menus of topNavMenu"
+    [type]="'menu'"
+    [title]="menus.text"
+    [icon]="menus.icon"
+    [data]="menus.children"
+      (onNavItemClick)="routeToLink($event)">
+    </amexio-nav-item>
+</amexio-nav>
+<amexio-row>
+    <amexio-column [size]="'12'" style="padding-top: 68px;">
+        <router-outlet></router-outlet>
+    </amexio-column>
+</amexio-row>
+
